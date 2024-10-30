@@ -5,8 +5,8 @@ SlackBeam is a self-hostable slack bot that helps teams generate social media co
 https://github.com/user-attachments/assets/d0ee3160-dad3-4061-8c53-afdad5c16ef4
 
 [![Publish Docker image](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml)
-![Docker Image Version](https://img.shields.io/docker/v/mustansirzia/slack-beam)
-![Docker Image Size](https://img.shields.io/docker/image-size/mustansirzia/slack-beam)
+[![Docker Image Version](https://img.shields.io/docker/v/mustansirzia/slack-beam)](https://hub.docker.com/r/mustansirzia/slack-beam/tags)
+[![Docker Image Size](https://img.shields.io/docker/image-size/mustansirzia/slack-beam)](https://hub.docker.com/repository/docker/mustansirzia/slack-beam/tags)
 
 ## Start
 1. Install **[Docker](https://www.docker.com)**.
