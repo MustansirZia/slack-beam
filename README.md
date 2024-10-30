@@ -1,14 +1,16 @@
 # SlackBeam
 
-SlackBeam is a slack bot that helps teams generate and manage social media content for X (formerly Twitter) directly from Slack. The bot uses AI-powered text generation to create post suggestions and provides an interactive interface for managing and publishing content.
+SlackBeam is a slack bot that helps teams generate social media content for X (formerly Twitter) directly from Slack. The bot uses AI-powered text generation to create post suggestions and provides an interactive interface for managing and publishing content.
 
 [![Publish Docker image](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml)
+![Docker Image Version](https://img.shields.io/docker/v/mustansirzia/slack-beam)
+![Docker Image Size](https://img.shields.io/docker/image-size/mustansirzia/slack-beam)
 
 ## Start
 1. Install **[Docker](https://www.docker.com)**.
 2. Run the following script:
 ```bash
-# Download prompt file.
+# Download the prompt file.
 wget https://github.com/MustansirZia/slack-beam/raw/refs/heads/main/x_prompts.json 2>/dev/null
 
 # Make changes to the prompt file.
@@ -26,8 +28,8 @@ sudo docker run \
      -e 'X_ACCESS_TOKEN_SECRET=<X_ACCESS_TOKEN_SECRET>' \
      -d \
      --restart unless-stopped \
-     -v (pwd)/x_prompts.json:/app/x_prompts.json \
-     mustansirzia/slack-beam
+     -v $(pwd)/x_prompts.json:/app/x_prompts.json \
+     mustansirzia/slack-beam:latest
 ```
 
 ## Technical Stack
