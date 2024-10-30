@@ -2,6 +2,8 @@
 
 SlackBeam is a slack bot that helps teams generate and manage social media content for X (formerly Twitter) directly from Slack. The bot uses AI-powered text generation to create post suggestions and provides an interactive interface for managing and publishing content.
 
+[![Publish Docker image](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml)
+
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
 - [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) - Gen AI Model. 
