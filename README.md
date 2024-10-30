@@ -1,4 +1,4 @@
-# SlackBeam
+# ☄️ SlackBeam
 
 SlackBeam is a self-hostable slack bot that helps teams generate social media content for X (formerly Twitter) directly from Slack. The bot uses AI-powered text generation to create post suggestions and provides an interactive interface for managing and publishing content.
 
