@@ -1,22 +1,15 @@
+import json
 import os
+from typing import Dict
 
 from tweepy import Client
 
-prompts = {
-    'Joyful': "I need your help in writing a post for X which "
-              "should be less than 280 characters. Can you suggest {count} ideas about a post "
-              "that sounds joyful and fun?"
-              "Please note that each "
-              "post should have 2-3 relevant hashtags and 0-1 emojis",
-    'Suspenseful': "I need your help in writing a post for X which "
-                   "should be less than 280 characters. Can you suggest {count} ideas about a post "
-                   "that suits a suspense novel called Goosebumps? "
-                   "Please note that each post should have 2-3 relevant hashtags and 0-1 emojis. ",
-    'Funny': "I need your help in writing a joke for X which "
-             "should be less than 280 characters. Can you suggest {count} jokes that are suitable for all "
-             "audiences? "
-             "Please note that each joke should have 2-3 relevant hashtags and 0-1 emojis. "
-}
+
+def get_prompts() -> Dict[str, str]:
+    with open('x_prompts.json') as fd:
+        prompts = json.load(fd)
+        return prompts
+
 
 more_prompt = "Can you please show {count} more ideas?"
 

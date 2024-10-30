@@ -15,6 +15,8 @@ COPY app app
 
 VOLUME posts.db
 
+VOLUME *_prompts.json
+
 EXPOSE $PORT
 
 CMD ["gunicorn", "app:app"]
