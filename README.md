@@ -35,7 +35,7 @@ sudo docker run \
 ```
 ## Configure
 
-<iframe width="50%" height="auto" src="https://www.youtube.com/embed/ysUBZQzlBUI?si=CgowoZMCIuWZxdpD" title="Configure Slack App" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+![Configure Slack App](https://www.youtube.com/embed/ysUBZQzlBUI?si=CgowoZMCIuWZxdpD)
 
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
