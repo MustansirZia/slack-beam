@@ -3,7 +3,7 @@ import os
 
 from slack_bolt import App
 
-from app.platform.x import prompts as prompts_for_x, more_prompt as more_prompt_for_x, create_post
+from app.platform.x import get_prompts as get_prompts_for_x, more_prompt as more_prompt_for_x, create_post
 from app.language_models import get_raw_posts
 from app.storage import save_raw_posts, PostType, get_post_by_id
 from app.utilities import generate_id, generate_slack_response_blocks_for_posts, \
@@ -26,6 +26,7 @@ ACTION_POST_ON_X = "post-on-x"
 def generate_post_types_for_x(ack, respond):
     ack()
     try:
+        prompts_for_x = get_prompts_for_x()
         blocks = generate_slack_response_blocks_for_post_types(
             {key for key in prompts_for_x},
             ACTION_GENERATE_POSTS_FOR_X,
@@ -43,6 +44,7 @@ def generate_posts_for_x(ack, respond, payload):
         respond("Thinking about this...")
         prompt = payload.get('selected_option', {}).get('value')
 
+        prompts_for_x = get_prompts_for_x()
         if prompt not in prompts_for_x:
             respond('Unknown post type chosen. Please try again.')
             return
