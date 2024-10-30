@@ -36,7 +36,7 @@ sudo docker run \
 
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
-- [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) - Gen AI Model. 
+- [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet) - Gen AI Model. 
 - [Langchain](https://python.langchain.com) - LLM Tooling.
 - [SQLite](https://www.sqlite.org) - Persistent Storage for Suggestions and Conversations.
 - [SQLAlchemy](https://www.sqlalchemy.org) - ORM for Storage.
