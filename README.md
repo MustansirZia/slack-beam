@@ -35,7 +35,7 @@ sudo docker run \
 ```
 ## Slack App Configuration
 
-[![Configure Slack App](https://img.youtube.com/vi/ysUBZQzlBUI/maxresdefault.jpg)](https://www.youtube.com/watch?v=ysUBZQzlBUI)
+[![Configure Slack App](https://img.youtube.com/vi/ysUBZQzlBUI/maxresdefault.jpg?q=50)](https://www.youtube.com/watch?v=ysUBZQzlBUI)
 ^ Add the app to your Slack workspace **after** you do this.
 
 ## Technical Stack
