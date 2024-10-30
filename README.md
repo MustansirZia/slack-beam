@@ -3,13 +3,14 @@
 SlackBeam is a slack bot that helps teams generate and manage social media content for X (formerly Twitter) directly from Slack. The bot uses AI-powered text generation to create post suggestions and provides an interactive interface for managing and publishing content.
 
 ## Technical Stack
-- Python 3.12 - Runtime.
-- Claude Sonnet 3.5 - Gen AI Model. 
-- Langchain - LLM Tooling.
-- SQLite - Suggestion Persistence and Conversational History.
-- Flask - HTTP Framework.
-- Gunicorn - WSGI HTTP Server. 
-- Bolt - Slack Framework.
+- [Python 3.12](https://www.python.org) - Runtime.
+- [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) - Gen AI Model. 
+- [Langchain](https://python.langchain.com) - LLM Tooling.
+- [SQLite](https://www.sqlite.org) - Persistent Storage for Suggestions and Conversations.
+- [SQLAlchemy](https://www.sqlalchemy.org) - ORM for Storage.
+- [Flask](https://flask.palletsprojects.com) - HTTP Framework.
+- [Gunicorn](https://gunicorn.org) - WSGI HTTP Server. 
+- [Bolt](https://api.slack.com/bolt) - Slack Integration Framework.
 
 ## Features
 
@@ -20,10 +21,10 @@ SlackBeam is a slack bot that helps teams generate and manage social media conte
 
 ## Requirements
 
-1. **Docker**.
-2. **Prompt file**.
+1. **[Docker](https://www.docker.com)**.
+2. **[Prompts JSON file](https://github.com/MustansirZia/slack-beam/blob/main/x_prompts.json)**.
 
-### Environment Variables
+## Environment Variables
 
 1. **Slack Credentials**
    - `SLACK_BOT_TOKEN`: OAuth token for your Slack bot
@@ -59,3 +60,6 @@ SlackBeam is a slack bot that helps teams generate and manage social media conte
       - Find "API Key and Secret" for consumer credentials
       - Generate "Access Token and Secret" under User authentication tokens
    5. Ensure your app has "Read and Write" permissions
+
+## License
+MIT.
