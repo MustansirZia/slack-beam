@@ -8,9 +8,12 @@ https://github.com/user-attachments/assets/d0ee3160-dad3-4061-8c53-afdad5c16ef4
 [![Docker Image Version](https://img.shields.io/docker/v/mustansirzia/slack-beam)](https://hub.docker.com/r/mustansirzia/slack-beam/tags)
 [![Docker Image Size](https://img.shields.io/docker/image-size/mustansirzia/slack-beam)](https://hub.docker.com/repository/docker/mustansirzia/slack-beam/tags)
 
-## Start
-1. Install **[Docker](https://www.docker.com)**.
-2. Run the following script:
+## Instructions
+
+### 1. Start
+A. Install **[Docker](https://www.docker.com)**.
+
+B. Run the following script:
 ```bash
 # Download the prompt file.
 wget https://github.com/MustansirZia/slack-beam/raw/refs/heads/main/x_prompts.json 2>/dev/null
@@ -18,7 +21,7 @@ wget https://github.com/MustansirZia/slack-beam/raw/refs/heads/main/x_prompts.js
 # Make changes to the prompt file.
 # vi x_prompts.json
 
-# Start the app.
+# Start the container.
 sudo docker run \
      -p 80:8000 \
      -e 'SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>' \
@@ -33,10 +36,14 @@ sudo docker run \
      -v $(pwd)/x_prompts.json:/app/x_prompts.json \
      mustansirzia/slack-beam:latest
 ```
-## Slack App Configuration
+### 2. Configure Slack App
 
 [![Configure Slack App](https://img.youtube.com/vi/ysUBZQzlBUI/maxresdefault.jpg?q=50)](https://www.youtube.com/watch?v=ysUBZQzlBUI)
 ^ Add the app to your Slack workspace **after** you do this.
+
+### 3. Use SlackBeam!
+
+<hr />
 
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
