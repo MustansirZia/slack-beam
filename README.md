@@ -4,6 +4,32 @@ SlackBeam is a slack bot that helps teams generate and manage social media conte
 
 [![Publish Docker image](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MustansirZia/slack-beam/actions/workflows/publish.yml)
 
+## Start
+1. Install **[Docker](https://www.docker.com)**.
+2. Run the following script:
+```bash
+# Download prompt file.
+wget https://github.com/MustansirZia/slack-beam/raw/refs/heads/main/x_prompts.json 2>/dev/null
+
+# Make changes to the prompt file.
+# vi x_prompts.json
+
+# Start the app.
+sudo docker run \
+     -p 80:8000 \
+     -e 'SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>' \
+     -e 'SLACK_SIGNING_SECRET=<SLACK_SIGNING_SECRET>' \
+     -e 'ANTHROPIC_API_KEY=<ANTHROPIC_API_KEY>' \
+     -e 'X_CONSUMER_KEY=<X_CONSUMER_KEY>' \
+     -e 'X_CONSUMER_SECRET=<X_CONSUMER_SECRET>' \
+     -e 'X_ACCESS_TOKEN=<X_ACCESS_TOKEN>' \
+     -e 'X_ACCESS_TOKEN_SECRET=<X_ACCESS_TOKEN_SECRET>' \
+     -d \
+     --restart unless-stopped \
+     -v (pwd)/x_prompts.json:/app/x_prompts.json \
+     mustansirzia/slack-beam
+```
+
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
 - [Claude Sonnet 3.5](https://www.anthropic.com/news/claude-3-5-sonnet) - Gen AI Model. 
@@ -20,11 +46,6 @@ SlackBeam is a slack bot that helps teams generate and manage social media conte
 - Multiple post type templates available that are driven by configurable prompts.
 - Batch generation of post suggestions.
 - Post a suggestion you like to X directly via Slack.
-
-## Requirements
-
-1. **[Docker](https://www.docker.com)**.
-2. **[Prompts JSON file](https://github.com/MustansirZia/slack-beam/blob/main/x_prompts.json)**.
 
 ## Environment Variables
 
