@@ -33,9 +33,10 @@ sudo docker run \
      -v $(pwd)/x_prompts.json:/app/x_prompts.json \
      mustansirzia/slack-beam:latest
 ```
-## Configure
+## Slack App Configuration
 
-![Configure Slack App](https://www.youtube.com/embed/ysUBZQzlBUI?si=CgowoZMCIuWZxdpD)
+[![Configure Slack App](https://img.youtube.com/vi/ysUBZQzlBUI/maxresdefault.jpg)](https://www.youtube.com/watch?v=ysUBZQzlBUI)
+^ Add the app to your Slack workspace **after** you do this.
 
 ## Technical Stack
 - [Python 3.12](https://www.python.org) - Runtime.
