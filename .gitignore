@@ -1,5 +1,15 @@
+# IDE files.
 .idea
+
+# py caches.
 __pycache__
+*.pyc
+
+# Virtual environment.
 venv
+
+# SQLite files.
 *.db
+
+# MacOS filesystem files.
 .DS_Store
