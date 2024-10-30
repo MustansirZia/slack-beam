@@ -19,7 +19,7 @@ def generate_slack_response_blocks_for_post_types(
             {
                 "text": {
                     "type": "plain_text",
-                    "text": f"{index + 1}. {post} Persona",
+                    "text": f"{index + 1}. {post}",
                 },
                 "value": post
             },
